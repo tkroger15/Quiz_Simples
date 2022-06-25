@@ -5,7 +5,9 @@ def cabecalho(txt=' '):
 
 
 total_acertos = soma_acertos = cnt_questoes = 0
+
 cabecalho('MEU JOGO DE PERGUNTAS')
+
 perguntas = {  # dic1
     'pergunta1': {  # dic 2
         'pergunta': 'qual é o protagonista de the boys?',
@@ -41,9 +43,11 @@ for pk, pv in perguntas.items():  # pergunta key
     print(f'{pk}: {pv["pergunta"]}')
     print()
     print('alternativas: ')
+    
     for qk, qv in pv['resposta'].items():  # questao key
         print(f'({qk}) {qv}')
     resposta_usuario = input('Qual seu palpite? ').lower().strip()[0]
+    
     if resposta_usuario != 'a' and resposta_usuario != 'b' and resposta_usuario != 'c':
         while True:
             resposta_usuario = input('Qual seu palpite? ').lower().strip()[0]
